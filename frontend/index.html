@@ -1,0 +1,9 @@
+<!doctype html>
+<html lang="en">
+<head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1"><title>Nebula Vision Inspection</title><link rel="stylesheet" href="style.css"></head>
+<body>
+<main><h1>Nebula Vision Inspection</h1><p class="hint">Place one 150 mm end-to-end ruler flat beside one mechanical component. Photograph from directly above.</p>
+<div id="camera-wrap"><video id="video" autoplay playsinline muted></video><canvas id="overlay"></canvas></div>
+<div id="controls"><button id="btn-photo">Capture photo</button><button id="btn-upload">Upload photo</button><input id="file-fallback" type="file" accept="image/*" capture="environment" hidden><button id="btn-report" disabled>Download PDF report</button></div>
+<details><summary>Optional dimensional tolerance</summary><div class="spec"><label>Nominal length (mm)<input id="length-nominal" type="number" min="0" step="0.01"></label><label>Nominal width (mm)<input id="width-nominal" type="number" min="0" step="0.01"></label><label>Tolerance +/- (mm)<input id="tolerance" type="number" min="0" step="0.01"></label></div><p class="hint">Without a tolerance, accepted inspections are REVIEW - never automatic PASS.</p></details>
+<section id="result" aria-live="polite"></section></main><script src="app.js"></script></body></html>
